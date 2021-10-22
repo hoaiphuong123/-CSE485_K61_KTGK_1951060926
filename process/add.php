@@ -2,7 +2,7 @@
 include '../header.php';
 include '../config.php';
 ?>
-<form action="add.php" method="post">
+<form  method="post">
     <div class="form-group row">
         <label for="" class="col-sm-2 col-form-label">Tên bài thi</label>
         <div class="col-sm-10">
@@ -57,8 +57,9 @@ include '../config.php';
     $mark = $_POST['Mark'];
     $examcode = $_POST['Examcode'];
     //? câu lệnh
-    $sql = "INSERT INTO `exams`(`exam_title`, `exam_datetime`, `duration`, `total_question`, `marks_per_right_answer`,`exam_code`) VALUES 
-    VALUES(' $name','$examdatetime ',' $durations','$question',$mark','$email','$examcode')";
+    $sql = "INSERT INTO `exams`(`exam_title`, `exam_datetime`, `duration`, `total_question`, `marks_per_right_answer`,`exam_code`) 
+    VALUES('$name','$examdatetime','$durations','$question','$mark','$examcode')";
+    // echo $sql;
     //? kiểm tra và thực thi lệnh
     $result = mysqli_query($conn, $sql);
     if ($result > 0) {

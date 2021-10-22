@@ -2,7 +2,7 @@
 include './header.php';
 $idd = $_GET['id'];
 ?>
-<a href="index.php" class="btn btn-primary">Quay lại trang chủ</a>
+<a href="./process/add.php" class="btn btn-primary">ADD</a>
 <table class="table table-ronsponsive">
 <thead>
         <tr>
